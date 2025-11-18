@@ -144,6 +144,56 @@
             font-weight: bold;
             color: #e74c3c;
         }
+        
+        .companion-callout {
+            background: #e8f4ff;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0 40px 0;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+            text-align: center;
+        }
+
+        .companion-callout h2 {
+            color: #2c3e50;
+            font-size: 1.9rem;
+            margin-bottom: 10px;
+        }
+
+        .companion-callout p {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 0;
+        }
+
+        .companion-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0 10px 0;
+        }
+
+        .companion-button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .companion-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .companion-button.secondary {
+            background: #2c3e50;
+        }
 
         .responsive-image {
             max-width: 100%;
@@ -421,6 +471,29 @@
             </p>
         </div>
 
+        <div class="companion-callout">
+            <h2>Companion Desktop App Required</h2>
+            <p>This Electron app streams typing data and system stats to your ESP32—install it right after flashing or Bongo Cat will stay idle.</p>
+            <div class="companion-buttons">
+                <a class="companion-button" href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/Bongo.Cat.Setup.1.0.0.zip" target="_blank" rel="noopener">
+                    🪟 Windows Installer (.zip)
+                </a>
+                <a class="companion-button" href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/bongo-cat-mac-arm64.zip" target="_blank" rel="noopener">
+                    🍎 macOS Apple Silicon
+                </a>
+                <a class="companion-button" href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/bongo-cat-mac-x64.zip" target="_blank" rel="noopener">
+                    🍏 macOS Intel
+                </a>
+                <a class="companion-button" href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/bongo-cat-linux-appimage.zip" target="_blank" rel="noopener">
+                    🐧 Linux AppImage
+                </a>
+                <a class="companion-button secondary" href="#desktop-apps">
+                    ℹ️ See setup details
+                </a>
+            </div>
+            <p class="download-note" style="margin-top:5px;">All files are hosted on the <a href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/tag/v1" target="_blank" rel="noopener">GitHub Releases page</a>.</p>
+        </div>
+
         <div class="installation-section">
             <h2>Software Installation Instructions</h2>
             
@@ -560,7 +633,7 @@
 
         </div>
 
-        <div class="pc-app-section">
+        <div id="desktop-apps" class="pc-app-section">
             <h2>Electron Desktop Application Downloads</h2>
             
             <p class="app-description">
@@ -573,10 +646,10 @@
                     <h4>🪟 Windows Installer</h4>
                     <p>Signed Electron setup for Windows 10/11.</p>
                     <div class="download-container">
-                        <a href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/Bongo%20Cat%20Setup%201.0.0.exe" class="download-button" target="_blank" rel="noopener">
-                            📦 Download Windows Installer (.exe)
+                        <a href="https://github.com/vostoklabs/Bongo_Cat_v2_webflasher/releases/latest/download/Bongo.Cat.Setup.1.0.0.zip" class="download-button" target="_blank" rel="noopener">
+                            📦 Download Windows Installer (.zip)
                         </a>
-                        <p class="download-note">Served from Releases—upload the .exe there to enable this button.</p>
+                        <p class="download-note">Served from Releases—extract the zip, then run the bundled installer.</p>
                     </div>
                 </div>
                 
@@ -611,8 +684,8 @@
                 
                 <h4>Windows Setup:</h4>
                 <ol class="setup-list">
-                    <li>Download <strong>Bongo Cat Setup 1.0.0.exe</strong> above.</li>
-                    <li>Run the installer, approve the SmartScreen prompt if it appears.</li>
+                    <li>Download <strong>Bongo.Cat.Setup.1.0.0.zip</strong> above.</li>
+                    <li>Extract the zip and run <strong>Bongo Cat Setup.exe</strong>, approving the SmartScreen prompt if it appears.</li>
                     <li>Launch Bongo Cat from the Start menu; it will minimize to the system tray.</li>
                     <li>Connect your ESP32 and pick the detected COM port in the app.</li>
                     <li>Start typing and watch your Bongo Cat come to life! 🎉</li>
