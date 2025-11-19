@@ -2,7 +2,14 @@
 
 A web-based installer for the Bongo Cat ESP32 project - a cute digital pet that types with you and displays system stats.
 
+## 📁 Repository Contents
 
+- `index.html` - Main web installer page
+- `manifest.json` - ESP Web Tools manifest for flashing
+- `manifest-*.json` - Board-specific manifests for ESP Web Tools
+- `build/` - Compiled ESP32 binaries grouped by display variant
+- `web-resources/` - Images, GIFs, and screenshots used on the site
+- `.nojekyll` - Ensures GitHub Pages serves assets without Jekyll processing
 
 ## 🚀 Features
 
@@ -28,6 +35,12 @@ Bongo Cat is a cute digital pet that will type with you. It can show:
 3. **Connect**: App automatically finds and connects to ESP32 over network
 4. **Type**: Watch your Bongo Cat respond to your typing!
 
+## 🔧 Development
+
+To run locally:
+1. Clone this repository
+2. Start a local web server (required for ESP Web Tools)
+3. Open `index.html` in Chrome or Edge
 
 ## 📋 Requirements
 
